@@ -3,6 +3,7 @@ title: How I (sorta) Dualboot Windows and Linux
 author: Dylan / Shark
 description: This is how I managed to (sorta) dualboot linux (Pop!_OS) and Windows 10 (22H2).
 pubDatetime: 2024-05-08T18:54:19.949Z
+modDatetime: 2025-03-10T16:01:34.136Z
 slug: dualbooting-win-and-linux
 featured: true
 draft: false
@@ -22,7 +23,7 @@ been having lots of bugs on windows and at this point, I only use it for gaming.
 
 ## Why leave Windows?
 
-I have left the Windows community because of many bugs, little customizability, and a massive dependency on Microsoft Store.
+I have (partially) left the Windows community because of many bugs, little customizability, and a massive dependency on Microsoft Store.
 
 ## Windows Bugs:
 
@@ -57,6 +58,54 @@ Microsoft Store to calculate numbers?
 
 It isn't just me that is having these issues. There are many other people complaining about this in the Windows community aswell.
 
+## Choosing a Linux Distro
+
+I have used many Linux distros in the past such as Debian, Ubuntu, Arch, Pop!_OS, VanillaOS, Mint, and Alpine to name a few.
+
+I didn't want to use an extremely bleeding-edge / rolling release OS, I would rather have a stable one because this was my main PC at the time (I have gotten a new one since, I will eventually write a blog on that) and I also don't have lots of time to spend configuring my machine.
+
+Now, I had narrowed it down to 3. Debian. Ubuntu, and Pop!_OS
+
+Lets go over the pros and cons of all of them. First, Debian!
+
+**Debian's pros**:
+- Already built with a DE / WM
+- Easy to use
+- Beginner friendly (at the time I was a noob)
+- Barely any time spent configuring
+
+**Debian's cons**:
+- Very slow (this seemed to be an issue with my PC, still couldn't get it to work)
+- DE / WM wasn't really pretty or polished IMO
+- IMO, apt is a pretty bad package manager
+
+Next I will cover Ubuntu!
+
+**Ubuntu's pros**:
+- Already built with a DE / WM (a very good one too, GNOME)
+- Easy to use
+- Beginner friendly
+- Fun to use
+
+**Ubuntu's cons**:
+- Very bloated (just the installation took 8gb alone, doesn't matter for me though because I have a lot of space)
+- apt still isn't very good
+
+Finally, Pop!_OS!
+
+**Pop's pros**:
+- Very simple to use
+- Very user and beginner friendly
+- Already built with a DE / WM (GNOME)
+- Fun to use and configure
+- Has a dedicated store for downloading apps straight from (wasn't the best when I used it, pretty buggy)
+
+**Pop's cons**:
+- Very very bloated (had more features than Ubuntu for about the same size, still a lot for some people)
+- Again, apt kinda sucks
+
+### So, I decided to go with, Pop!_OS
+
 ## Now actually dualbooting..
 
 Dualbooting was a very challenging switch to make (and still is) for me. I have used a more advanced and modern tool for
@@ -70,6 +119,8 @@ I kept on having Windows take over boot priority over rEFInd, then Linux took bo
 working somewhat correctly (after about 5 tutorials).
 
 This tool doesn't have the best documentation (for issues) compared to other tools, so if you have an issue, you're all on your own (for the most part).
+
+*Quick note: I wasn't the sharpest tool in the shed while writing this blog, this tool does have great documentation, make sure to check it out*
 
 
 
