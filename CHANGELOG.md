@@ -77,3 +77,10 @@
 ### What else is different from 4.2.2
 - Bumped version ([05809f0](https://github.com/rearrangement/website/commit/05809f04148be071e435c1476b3e9e252379c3e4))
 - No other shadow changes have been made.
+
+## 4.2.4
+- Moved all of the code for the Card into it's own component
+- Added glow to the Navbar and Card because it's cool
+
+### What else is different from 4.2.3
+- No other shadow changes have been made. 

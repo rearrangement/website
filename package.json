@@ -1,7 +1,7 @@
 {
   "name": "website",
   "type": "module",
-  "version": "4.2.3",
+  "version": "4.2.4",
   "scripts": {
     "dev": "astro dev && astro disable telemetry",
     "build": "astro check && astro build && astro disable telemetry",
