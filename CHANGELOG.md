@@ -81,6 +81,7 @@
 ## 4.2.4
 - Moved all of the code for the Card into it's own component ([b4c56b4](https://github.com/rearrangement/website/commit/b4c56b4ecf6c50776523df3bf6b1370fb24d8d07))
 - Added glow to the Navbar and Card because it's cool ([b4c56b4](https://github.com/rearrangement/website/commit/b4c56b4ecf6c50776523df3bf6b1370fb24d8d07))
+- Make sure to fix the import ([8c4db0e](https://github.com/rearrangement/website/commit/8c4db0ec3ca96c122beac6e2732cb0a8e188dfcf))
 
 ### What else is different from 4.2.3
 - Bumped version ([b4c56b4](https://github.com/rearrangement/website/commit/b4c56b4ecf6c50776523df3bf6b1370fb24d8d07))
