@@ -79,8 +79,9 @@
 - No other shadow changes have been made.
 
 ## 4.2.4
-- Moved all of the code for the Card into it's own component
-- Added glow to the Navbar and Card because it's cool
+- Moved all of the code for the Card into it's own component ([b4c56b4](https://github.com/rearrangement/website/commit/b4c56b4ecf6c50776523df3bf6b1370fb24d8d07))
+- Added glow to the Navbar and Card because it's cool ([b4c56b4](https://github.com/rearrangement/website/commit/b4c56b4ecf6c50776523df3bf6b1370fb24d8d07))
 
 ### What else is different from 4.2.3
+- Bumped version ([b4c56b4](https://github.com/rearrangement/website/commit/b4c56b4ecf6c50776523df3bf6b1370fb24d8d07))
 - No other shadow changes have been made. 
