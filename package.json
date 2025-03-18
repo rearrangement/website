@@ -11,7 +11,7 @@
     "@astrojs/check": "^0.9.4",
     "@astrojs/partytown": "^2.1.4",
     "@astrojs/react": "^3.6.3",
-    "@astrojs/sitemap": "^3.2.1",
+    "@astrojs/sitemap": "^3.3.0",
     "@astrojs/vercel": "^7.8.2",
     "astro": "^4.16.18",
     "typescript": "^5.8.2"
@@ -20,6 +20,6 @@
     "prettier": "^3.5.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "sass": "^1.85.1"
+    "sass": "^1.86.0"
   }
 }
