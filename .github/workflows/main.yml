@@ -118,11 +118,10 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Install / init bun
+      - name: Install / init pnpm
         run: |
-          curl -fsSL https://bun.sh/install | bash
-          exec bash
-          bun update
+           npm install -g pnpm
+           pnpm update
       - name: Setup actions bot
         run: |
           git config --global user.email "43298669260+github-actions[bot]@users.noreply.github.com"
