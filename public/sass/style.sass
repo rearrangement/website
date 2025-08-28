@@ -8,19 +8,43 @@
   font-display: swap
   font-style: normal
 
+html, body
+  margin: 0
+  padding: 0
+  font-family: 'Minecraft', sans-serif
+  background: #000000
+  color: #ffffff
+
+
 .bio
-  position: fixed
   display: flex
   overflow: hidden
   justify-content: center
   align-items: center
   min-height: 100vh
 
-.bio-main
+.title
+  display: flex
+  margin: 0 auto
+
+.name
+  font-size: 24px
+
+.description
+  font-size: 14px
+  
+
+/* 3d animation from Kevin Powell!! thanks!!
+
+.card
   border-radius: 20px
   background: #111111
-  width: 37.5rem
-  height: 121px
+  width: 42rem
+  height: 325px
   padding: 20px
   padding-bottom: 55px
-  box-shadow: 0 0 20px #ffffff40
+
+  transform: perspective(5000px) rotateY(var(--rotateY)) rotateX(var(--rotateX))
+
+.name
+  // font-size: 24px

@@ -7,6 +7,7 @@ import GithubLogo from "../components/GithubLogo.astro";
 import MonkeyTypeLogo from "../components/MonkeyTypeLogo.astro";
 import SpotifyLogo from "../components/SpotifyLogo.astro";
 import SteamLogo from "../components/SteamLogo.astro";
+import PersonLogo from "../components/PersonLogo.astro";
 ---
 
 <html lang="en-us">
@@ -21,8 +22,35 @@ import SteamLogo from "../components/SteamLogo.astro";
 	</head>
 
     <body class="bio">
-        <div class="bio-main">
-            
+        <div class="card">
+			<div class="title">
+				<span class="person"><PersonLogo /></span>
+				<div class="name">
+					&nbsp;&nbsp; Dylan
+					<div class="description">
+					&nbsp;&nbsp;&nbsp;&nbsp; <span class="typed"></span>
+					</div>
+				</div>
+			<div class="embeds">
+
+			</div>
+			<div class="socials">
+
+			</div>
         </div>
     </body>
+
+	<script is:inline src="/ts/card.js"></script>
+	<script is:inline src="/ts/typed.js"></script>
+
+	<script> 
+		document.addEventListener("DOMContentLoaded", function() {
+			var typed = new Typed(".typed", {
+				strings: ["sometimes smart", "professional useless git committer", "never finishes projects", "always listening to music", "<3 vibe coding", "13 years old"],
+				typeSpeed: 70,
+				backSpeed: 50,
+				loop: true
+			});
+		});
+	</script>
 </html>
