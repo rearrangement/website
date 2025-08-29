@@ -64,5 +64,5 @@ If there are security issues with MY code (NOT other packages that this code rel
 <div align="center">
 Made with ❤️ by Dylan.
 
-*this is subject to change*
+*this is subject to change!*
 </div>
