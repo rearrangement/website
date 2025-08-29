@@ -1,13 +1,14 @@
 ---
 import "../../public/sass/style.sass";
 
-import DiscordLogo from "../components/DiscordLogo.astro";
-import EmailLogo from "../components/EmailLogo.astro";
-import GithubLogo from "../components/GithubLogo.astro";
-import MonkeyTypeLogo from "../components/MonkeyTypeLogo.astro";
-import SpotifyLogo from "../components/SpotifyLogo.astro";
-import SteamLogo from "../components/SteamLogo.astro";
-import PersonLogo from "../components/PersonLogo.astro";
+import DiscordLogo from "../components/logos/DiscordLogo.astro";
+import EmailLogo from "../components/logos/EmailLogo.astro";
+import GithubLogo from "../components/logos/GithubLogo.astro";
+import MonkeyTypeLogo from "../components/logos/MonkeyTypeLogo.astro";
+import SpotifyLogo from "../components/logos/SpotifyLogo.astro";
+import SteamLogo from "../components/logos/SteamLogo.astro";
+import PersonLogo from "../components/logos/PersonLogo.astro";
+import DiscordPresence from "../components/DiscordPresence.astro";
 ---
 
 <html lang="en-us">
@@ -29,24 +30,35 @@ import PersonLogo from "../components/PersonLogo.astro";
 					&nbsp;&nbsp; Dylan
 					<div class="description">
 					&nbsp;&nbsp;&nbsp;&nbsp; <span class="typed"></span>
-					</div>
 				</div>
-			<div class="embeds">
-
-			</div>
-			<div class="socials">
-
 			</div>
         </div>
+
+		<br>
+
+		<div class="presence">
+			<DiscordPresence uid="1259305738183114812" />
+		</div>
+
+		<br>
+
+		<div class="socials">
+				<DiscordLogo link="https://discord.com/users/1259305738183114812" />
+        		<GithubLogo link="https://github.com/rearrangement" />
+        		<EmailLogo address="hi@shxrk.dev" /> <!-- You only need to type the email address here, don't worry about the mailto: part -->
+        		<SteamLogo link="https://steamcommunity.com/id/rearrangements/" />
+        		<SpotifyLogo link="https://open.spotify.com/user/ip24s6xdgak5k5rjnuqc59qo4" />
+        		<MonkeyTypeLogo link="https://monkeytype.com/profile/dylnn" />
+			</div>
     </body>
 
 	<script is:inline src="/ts/card.js"></script>
-	<script is:inline src="/ts/typed.js"></script>
+	<script is:inline src="/ts/libs/typed.js"></script>
 
 	<script> 
 		document.addEventListener("DOMContentLoaded", function() {
 			var typed = new Typed(".typed", {
-				strings: ["sometimes smart", "professional useless git committer", "never finishes projects", "always listening to music", "<3 vibe coding", "13 years old"],
+				strings: ["sometimes smart", "professional useless git committer", "never finishes projects", "always listening to music", "i love vibe coding", "13 years old"],
 				typeSpeed: 70,
 				backSpeed: 50,
 				loop: true

@@ -1,7 +1,7 @@
 {
   "name": "website",
   "type": "module",
-  "version": "5.0.0",
+  "version": "5.1.1",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -18,10 +18,10 @@
     "typescript": "^5.9.2"
   },
   "devDependencies": {
+    "@types/bun": "^1.2.21",
     "prettier": "^3.6.2",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "sass": "^1.91.0",
-    "@types/bun": "^1.2.21"
+    "sass": "^1.91.0"
   }
 }
