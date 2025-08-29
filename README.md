@@ -1,46 +1,68 @@
-# Astro Starter Kit: Basics
+<div align="center">
+<h1>
+rearrangement/website
+</h1>
 
-```sh
-bun create astro@latest -- --template basics
+This website was made for easy reproduction and for others to use aswell!
+</div>
+
+> [!WARNING] 
+> Feel free to fork this or use the code, 
+> just please make sure to give credits for 
+> the parts of code that you used, and also make 
+> sure to keep the license the same.
+
+<div align="center">
+<h2>Getting Started</h2>
+</div>
+To be able to run and make changes to your own version, follow this short tutorial.
+
+You'll need to clone the repository and install all of the required dependencies. You can do this by running the commands below.
+```bash
+git clone https://github.com/rearrangement/website.git dylsite
+cd dylsite
+bun i
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Once you have run these commands, you can now run
 
-## 🚀 Project Structure
+`bun run dev`
 
-Inside of your Astro project, you'll see the following folders and files:
+This will allow you to start a local development server where you can make changes and see those changes LOCALLY.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+Once you have run those commands, go to your browser of choice and visit the link `http://localhost:4321`
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+You will now be able to see the website.
 
-## 🧞 Commands
+<div align="center">
+<h2>Contributing</h2>
+</div>
 
-All commands are run from the root of the project, from a terminal:
+You can contribute to the repository by simply making a pull request to this repository with the proposed changes that you'd like to make.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
+Please make sure to update the changelog, if not it's alright but it saves us a little bit of time when reviewing the pull requests.
 
-## 👀 Want to learn more?
+Most of these pull requests will be reviewed by the repositories maintainers, (just me, rearrangement as of now) and your request will either be merged or declined most likely with a reason to our decision.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+All ideas and changes are welcome, don't be scared to contribute. This does not say that all ideas will be accepted though.
+
+<div align="center">
+<h2>Licensing</h2>
+</div>
+
+You are allowed to do anything that the license to this software permits, no matter what happens to the software. Even if this goes private and you repost it, you are 100% allowed to do so.
+
+There are some companies that license their software and then revoke it with no announcement (iykyk). The license that you get with this software will contain the set of rules of what you are allowed and not allowed to do with it. This license will always be valid no matter what.
+
+<div align="center">
+<h2>Security</h2>
+</div>
+
+If there are security issues with MY code (NOT other packages that this code relies on such as astro, typescript, sass, or any others), please follow the instructions in [SECURITY.md](https://github.com/rearrangement/website/blob/main/SECURITY.md) on how to report them and whatnot.
+
+---
+<div align="center">
+Made with ❤️ by Dylan.
+
+*this is subject to change*
+</div>
