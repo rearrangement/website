@@ -1,0 +1,49 @@
+---
+import Navbar from "../components/Navbar.astro";
+import ProjectsGrid from "../components/ProjectsGrid.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import "../../public/sass/style.sass";
+
+const projects = [
+  {
+    title: 'website', 
+    description: 'This very website that you are reading this text on right now!',
+    link: 'https://shxrk.dev/', 
+    showGithub: true, 
+    githubLink: 'https://github.com/rearrangement/website' 
+  },
+  {
+    title: 'winstro',
+    description: 'A small project for exporting and importing winget packages to install on a fresh windows installation',
+    link: 'https://github.com/rearrangement/winstro',
+    showGithub: true,
+    githubLink: 'https://github.com/rearrangement/winstro'
+  },
+  {
+    title: 'evermind',
+    description: 'A fully built planner for remembering to do your assignments!',
+    link: 'https://evermind.shxrk.dev/',
+    showGithub: true,
+    githubLink: 'https://github.com/rearrangement/evermind' 
+  },
+  {
+    title: 'blog',
+    description: 'The tiny blog I have setup for this website',
+    link: 'https://blog.shxrk.dev/',
+    showGithub: true,
+    githubLink: 'https://github.com/rearrangement/website/tree/blog'
+  },
+];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>projects : shxrk.dev</title>
+  </head>
+  <body>
+    <Navbar />
+
+    <ProjectsGrid items={projects} />
+  </body>
+</html>

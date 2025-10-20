@@ -9,6 +9,7 @@ import SpotifyLogo from "../components/logos/SpotifyLogo.astro";
 import SteamLogo from "../components/logos/SteamLogo.astro";
 import PersonLogo from "../components/logos/PersonLogo.astro";
 import DiscordPresence from "../components/DiscordPresence.astro";
+import Navbar from "../components/Navbar.astro";
 ---
 
 <html lang="en-us">
@@ -22,8 +23,9 @@ import DiscordPresence from "../components/DiscordPresence.astro";
 		<meta property="og:type" content="website"/>
 	</head>
 
-    <body class="bio">
-        <div class="card">
+	<body class="bio">
+		<Navbar />
+		<div class="card">
 			<div class="title">
 				<span class="person"><PersonLogo /></span>
 				<div class="name">

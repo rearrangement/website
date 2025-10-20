@@ -1,0 +1,85 @@
+---
+const { title = 'dylan' } = Astro.props;
+---
+
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a class="brand" href="/" aria-label="Home">{title}</a>
+    <div class="links" role="menubar" aria-label="Primary navigation">
+      <a class="nav-btn" href="https://blog.shxrk.dev" role="menuitem">Blog</a>
+      <a class="nav-btn" href="/projects" role="menuitem">Projects</a>
+    </div>
+  </div>
+</nav>
+
+<style>
+  :root {
+    --navbar-bg: rgba(15,15,15,0.12);
+    --btn-bg: rgba(255,255,255,0.04);
+    --btn-bg-hover: rgba(255,255,255,0.08);
+    --text: #ffffff;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: var(--navbar-bg);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    padding: 0.25rem 0.6rem;
+    box-sizing: border-box;
+  }
+
+  .nav-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .brand {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.25rem 0;
+    font-size: 1rem;
+  }
+
+  .links {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .nav-btn {
+    color: var(--text);
+    background: var(--btn-bg);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 0.34rem 0.6rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: transform .08s ease, background .12s ease;
+    display: inline-block;
+  }
+
+  .nav-btn:hover,
+  .nav-btn:focus {
+    background: var(--btn-bg-hover);
+    transform: translateY(-1px);
+    outline: none;
+  }
+
+  @media (max-width: 600px) {
+    .nav-inner { padding: 0 0.5rem; }
+    .links { gap: 0.35rem; }
+    .brand { font-size: 0.95rem; }
+    .nav-btn { padding: 0.28rem 0.5rem; font-size: 0.9rem; }
+  }
+</style>

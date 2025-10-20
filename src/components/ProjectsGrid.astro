@@ -1,0 +1,50 @@
+---
+import ProjectCard from './ProjectCard.astro';
+
+interface ProjectItem {
+  title: string;
+  description: string;
+  link: string;
+  showGithub?: boolean;
+  githubLink?: string;
+}
+
+const { items = [] } = Astro.props as { items: ProjectItem[] };
+---
+
+<section class="projects-grid" role="list">
+  {items.map((it) => (
+    <div class="grid-item" role="listitem">
+      <ProjectCard title={it.title} description={it.description} link={it.link} showGithub={it.showGithub} githubLink={it.githubLink} />
+    </div>
+  ))}
+</section>
+
+<style>
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+  max-width: 980px;
+  margin: 180px auto 16px;
+  padding: 0.5rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+    max-height: calc(100vh - 120px);
+  }
+
+  .grid-item { display: block; }
+
+  /* Fallback card style (keeps consistent look if not using ProjectCard component) */
+  .project-card-fallback {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 0.8rem;
+  min-height: 100px;
+  }
+
+  @media (max-width: 700px) {
+    .projects-grid { grid-template-columns: 1fr; }
+  }
+</style>
