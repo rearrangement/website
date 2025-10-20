@@ -40,3 +40,10 @@
 - Made card transparent
 - Slight bugfixes and changes with the card's tilting animation
 - Added favicon
+
+## 5.2.0-final
+- Added a projects page (this included adding the card structure)
+- Added a main navbar
+- Changed the card a little for theming
+- Removed bun and moved to pnpm
+- Bumped version
