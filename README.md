@@ -1,6 +1,6 @@
 <div align="center">
 <h1>
-rearrangement/website
+mostwise/website
 </h1>
 
 This website was made for easy reproduction and for others to use aswell!
@@ -19,7 +19,7 @@ To be able to run and make changes to your own version, follow this short tutori
 
 You'll need to clone the repository and install all of the required dependencies. You can do this by running the commands below.
 ```bash
-git clone https://github.com/rearrangement/website.git dylsite
+git clone https://github.com/mostwise/website.git dylsite
 cd dylsite
 bun i
 ```
