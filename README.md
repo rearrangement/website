@@ -21,12 +21,12 @@ You'll need to clone the repository and install all of the required dependencies
 ```bash
 git clone https://github.com/mostwise/website.git dylsite
 cd dylsite
-bun i
+pnpm i
 ```
 
 Once you have run these commands, you can now run
 
-`bun run dev`
+`pnpm run dev`
 
 This will allow you to start a local development server where you can make changes and see those changes LOCALLY.
 
