@@ -1,0 +1,19 @@
+.radial {
+    --x: 50vw;
+    --y: 50vh;
+    mask-size: 90px 90px;
+    mask-image: linear-gradient(90deg, #fff 1px, transparent 0),
+        linear-gradient(180deg, #fff 1px, transparent 0);
+    --size: 600px;
+    background: radial-gradient(var(--size), #4a4a4a, transparent 80%);
+    background-size: 200vw 200vh;
+    background-position-y: calc(var(--y) + 100vh);
+    background-position-x: calc(var(--x) + 100vw);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+}
