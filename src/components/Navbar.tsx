@@ -12,17 +12,17 @@ export default function Navbar() {
             Home
           </Button>
         </Link>
-        <Link href="#about">
+        <Link href="/projects">
           <Button variant="ghost" className="rounded-full text-white hover:bg-white/10 hover:text-white">
             Projects
           </Button>
         </Link>
-        <Link href="#projects">
+        <Link href="/blog">
           <Button variant="ghost" className="rounded-full text-white hover:bg-white/10 hover:text-white">
-            GitHub
+            Blog
           </Button>
         </Link>
-        <Link href="#contact">
+        <Link href="/contact">
           <Button variant="default" className="rounded-full bg-white text-black hover:bg-zinc-200">
             Contact
           </Button>
