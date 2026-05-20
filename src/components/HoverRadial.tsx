@@ -12,8 +12,17 @@ export default function HoverRadial() {
         const handleMouseMove = (e: MouseEvent) => {
             if (!radial.current) return;
 
-            radial.current.style.setProperty("--x", `${e.clientX}px`);
-            radial.current.style.setProperty("--y", `${e.clientY}px`);
+            // 5-20-26: see git commit,
+            // changed the --x and --y radial to be global for use in card effect aswell
+            // nevermind, i'm not implementing this but whatever
+            const x = `${e.clientX}px`;
+            const y = `${e.clientY}px`;
+
+            radial.current.style.setProperty("--x", x);
+            radial.current.style.setProperty("--y", y);
+            
+            document.documentElement.style.setProperty("--mouse-x", x);
+            document.documentElement.style.setProperty("--mouse-y", y);
         };
         
         window.addEventListener("mousemove", handleMouseMove);

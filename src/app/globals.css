@@ -128,3 +128,29 @@
     @apply font-sans;
   }
 }
+
+.contact-link-fx .contact-underline {
+  position: absolute;
+  left: 0;
+  bottom: -0.125rem;
+  height: 1px;
+  background-color: var(--color-neutral-200, #e5e5e5);
+  width: 0;
+  transition: all 0.3s ease-out;
+}
+.contact-link-fx:hover .contact-underline {
+  width: 100%;
+}
+
+.contact-link-fx .contact-arrow {
+  margin-left: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+  opacity: 0;
+  transform: translateX(-0.5rem);
+  transition: all 0.3s ease-out;
+}
+.contact-link-fx:hover .contact-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}

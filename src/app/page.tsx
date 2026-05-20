@@ -1,4 +1,7 @@
+"use client";
+
 import { ArrowRight } from "lucide-react";
+import { useEffect, useRef } from "react";
 import HoverRadial from "@/components/HoverRadial";
 import {
   Card,
@@ -6,8 +9,32 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Typed from "@/lib/typed.js";
 
 export default function Home() {
+  const el = useRef(null);
+
+  useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: [
+        "hello there",
+        "buenos dias",
+        "tu es beau (ou mignon)",
+        "dzien dobry",
+        "du riechst gut",
+        "assalamualaikum"
+      ],
+      typeSpeed: 70,
+      backSpeed: 50,
+      loop: true
+    });
+
+    return () => {
+      // Destroy Typed instance during cleanup to stop animation
+      typed.destroy();
+    };
+  }, []);
+
   return (
     <>
       <div
@@ -29,23 +56,23 @@ export default function Home() {
           zIndex: 1,
         }}
       >
-        <Card className="w-87.5 rounded-lg shadow-sm border border-neutral-800 bg-[#292927] text-[#e8eddfcb]">
+        <Card className="w-87.5 rounded-xl shadow-sm bg-[#292927] text-[#e8eddfcb]">
           <CardHeader>
-            <CardTitle>dylan</CardTitle>
+            <CardTitle>👋 <span ref={el}></span></CardTitle>
             <CardDescription className="text-neutral-400">
-              hey there, i'm dylan! i'm a 14 year old developer who builds things for the web. i'm an avid typescript fanboy amongst other things.
+              i'm dylan (aka wise), a 14 year old developer who builds things for the web. i'm an avid typescript fanboy amongst other things.
             </CardDescription>
             <CardDescription className="text-neutral-400">
               i sometimes blog about some projects i make and other things that i do.
             </CardDescription>
             <CardDescription className="text-neutral-200">
-              {/* quick disclaimer for anyone still here, the following lines 44-50 were ai generated!!! */}
-              <a href="/contact" className="group inline-flex items-center">
+              {/* quick disclaimer for anyone still here, the following lines 43-49 were ai generated!!! */}
+              <a href="/contact" className="inline-flex items-center contact-link-fx relative z-50">
                 <span className="relative">
                   get in touch!
-                  <span className="absolute left-0 -bottom-0.5 w-full h-px bg-neutral-200 origin-left scale-x-0 transition-transform duration-200 ease-out group-hover:scale-x-100 will-change-transform" />
+                  <span className="contact-underline" />
                 </span>
-                <ArrowRight className="ml-1 w-4 h-4 opacity-0 -translate-x-2 transition-all duration-200 ease-out group-hover:translate-x-0 group-hover:opacity-100 will-change-transform" />
+                <ArrowRight className="contact-arrow" />
               </a>
             </CardDescription>
           </CardHeader>
