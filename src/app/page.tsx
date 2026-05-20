@@ -12,10 +12,10 @@ import {
 import Typed from "@/lib/typed.js";
 
 export default function Home() {
-  const el = useRef(null);
+  const element = useRef(null);
 
   useEffect(() => {
-    const typed = new Typed(el.current, {
+    const typed = new Typed(element.current, {
       strings: [
         "hello there",
         "buenos dias",
@@ -58,7 +58,7 @@ export default function Home() {
       >
         <Card className="w-87.5 rounded-xl shadow-sm bg-[#292927] text-[#e8eddfcb]">
           <CardHeader>
-            <CardTitle>👋 <span ref={el}></span></CardTitle>
+            <CardTitle>👋 <span ref={element}></span></CardTitle>
             <CardDescription className="text-neutral-400">
               i'm dylan (aka wise), a 14 year old developer who builds things for the web. i'm an avid typescript fanboy amongst other things.
             </CardDescription>
