@@ -1,7 +1,4 @@
-"use client";
-
 import { ArrowRight } from "lucide-react";
-import { useEffect, useRef } from "react";
 import HoverRadial from "@/components/HoverRadial";
 import {
   Card,
@@ -9,32 +6,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import Typed from "@/lib/typed.js";
+import TypedTitle from "@/components/TypedTitle";
 
 export default function Home() {
-  const element = useRef(null);
-
-  useEffect(() => {
-    const typed = new Typed(element.current, {
-      strings: [
-        "hello there",
-        "buenos dias",
-        "tu es beau (ou mignon)",
-        "dzien dobry",
-        "du riechst gut",
-        "assalamualaikum"
-      ],
-      typeSpeed: 70,
-      backSpeed: 50,
-      loop: true
-    });
-
-    return () => {
-      // Destroy Typed instance during cleanup to stop animation
-      typed.destroy();
-    };
-  }, []);
-
   return (
     <>
       <div
@@ -58,7 +32,7 @@ export default function Home() {
       >
         <Card className="w-87.5 rounded-xl shadow-sm bg-[#292927] text-[#e8eddfcb]">
           <CardHeader>
-            <CardTitle>👋 <span ref={element}></span></CardTitle>
+            <CardTitle>👋 <TypedTitle /></CardTitle>
             <CardDescription className="text-neutral-400">
               i'm dylan (aka wise), a 14 year old developer who builds things for the web. i'm an avid typescript fanboy amongst other things.
             </CardDescription>
