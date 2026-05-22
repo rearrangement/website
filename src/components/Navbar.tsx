@@ -9,22 +9,22 @@ export default function Navbar() {
       <div className="flex items-center gap-4">
         <Link href="/">
           <Button variant="ghost" className="rounded-full text-white hover:bg-white/10 hover:text-white">
-            Home
+            home
           </Button>
         </Link>
         <Link href="/projects">
           <Button variant="ghost" className="rounded-full text-white hover:bg-white/10 hover:text-white">
-            Projects
+            projects
           </Button>
         </Link>
         <Link href="/blog">
           <Button variant="ghost" className="rounded-full text-white hover:bg-white/10 hover:text-white">
-            Blog
+            blog
           </Button>
         </Link>
         <Link href="/contact">
           <Button variant="default" className="rounded-full bg-white text-black hover:bg-zinc-200">
-            Contact
+            contact
           </Button>
         </Link>
       </div>
