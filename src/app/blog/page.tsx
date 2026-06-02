@@ -1,7 +1,11 @@
-export default function BlogPage() {
+"use client";
+
+export default function Blog() {
+  const redirect = () => {
+    window.location.href = "https://blog.wisest.cc";
+  };
+
   return (
-    <div>
-      <h1>Blog</h1>
-    </div>
+    redirect()
   );
 }

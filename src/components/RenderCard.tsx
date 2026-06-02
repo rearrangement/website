@@ -6,7 +6,7 @@ import {
     CardTitle 
 } from "./ui/card";
 
-export default function RenderCard(title: string, desc: string, message: string = "important", link: string = "#") {
+export default function RenderCard(title: string, desc: string, message: string, link: string = "#") {
     return (
         <Link href={link} target="_blank" rel="noopener noreferrer" className="block transition-transform hover:scale-[1.02] active:scale-[0.98]">
             <Card className="w-full h-full rounded-xl shadow-sm bg-[#292927] hover:bg-[#323230] transition-colors text-[#e8eddf]">
