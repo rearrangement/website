@@ -1,11 +1,5 @@
-"use client";
+import { redirect } from "next/navigation";
 
 export default function Blog() {
-  const redirect = () => {
-    window.location.href = "https://blog.wisest.cc";
-  };
-
-  return (
-    redirect()
-  );
+  redirect("https://blog.wisest.cc");
 }
