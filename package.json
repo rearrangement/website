@@ -4,8 +4,7 @@
   "description": "A minimal Astro blog template — serif typography, dark mode, RSS, OG images, optional Giscus comments and analytics.",
   "license": "MIT",
   "private": true,
-  "packageManager": "pnpm@10.19.0",
-  "scripts": {
+    "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
