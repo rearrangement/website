@@ -65,4 +65,6 @@ Here's my awesome list:
 - Includes support for stable software along with lots of bleeding-edge / rolling release software
 
 ## Which software did you use for Dualbooting?
-I went with [rEFInd](https://)
+I went with [rEFInd](https://https://www.rodsbooks.com/refind/), the most common (I believe) software / firmware for getting the dualbooting job done.
+
+In the past, I had stated that this tool had bad documentation, but I was just stupid as this tool has THE best documentation I think i've ever read. It goes into depth about the most common issues and even some advanced issues. Now, the developer isn't very present in the scene anymore (atleast according to the last update) 
