@@ -3,12 +3,21 @@ import RenderCard from "@/components/RenderCard";
 export default function Projects() {
     return (
         <div
-            className="flex-1 flex flex-col justify-center items-center w-full max-w-6xl px-4 mx-auto font-sans pb-24"
+            className="flex-1 flex flex-col justify-center w-full max-w-6xl px-4 mx-auto font-sans pb-24"
             style={{
               color: "#e8eddfcb",
               zIndex: 1,
             }}
         >
+
+            <div>
+                <h2 className="text-3xl font-bold mb-1 tracking-tight">
+                    projects:
+                </h2>
+                <p className="text-neutral-400 mb-4">
+                    these are some of the cool tools that i've made! please leave a star if possible
+                </p>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
                 {RenderCard(
