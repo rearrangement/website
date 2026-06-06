@@ -5,7 +5,7 @@ description: "My first post, but also how I was able to dualboot after many stru
 tags: [ dualboot, windows, linux, pc ]
 ---
 
-Hello and welcome to my first blog post! I'm glad you made it! Anyway, let's cut to the chase. This is the story on how I was able to dualboot Fedora and Windows using the rEFInd tool.
+Hello and welcome to my first blog post! I'm glad you made it! Anyway, let's cut to the chase. This is the story on how I was able to dualboot Fedora and Windows using the `rEFInd` tool.
 
 ## My History of Dualbooting
 First off, I'd like to start with my history of dualbooting.
@@ -43,9 +43,9 @@ Now back to games, you can't play Minecraft: Bedrock on Windows without the Micr
 *But..* you can literally play the Java editon almost anywhere! There are tons and tons of [unofficial launchers](https://prismlauncher.org) that allow you to play the other version of the game that aren't produced by Microsoft!
 
 ### Tracking & PUP Bloatware
-Now, everyone's aware that Windows tracks you. They have a kernel-level software to ensure that they can always have eyes on you called *Recall*
+Now, everyone's aware that Windows tracks you. They have a kernel-level software to ensure that they can always have eyes on you called `Recall`
 
-I'm not 100% sure if *Recall* has been actually deployed yet, but I know that Windows isn't afraid of letting you know that they have it ready whenever.
+I'm not 100% sure if `Recall` has been actually deployed yet, but I know that Windows isn't afraid of letting you know that they have it ready whenever.
 
 Now, the Bloatware. This stuff is basically just a bunch of PUPs *(potentially unwanted program(s))* that is almost useless to advanced users.
 
@@ -59,7 +59,7 @@ As you most likely read in the title, I chose Red Hat's *Fedora* as my Linux dis
 Here's my awesome list:
 - GPU Passthrough to Virtual Machines (iommu)
 - Had KDE Plasma avaliable as a DE *(desktop environment)* out of the box as a distributed ISO
-- *dnf* is a very strong package manager (very important to me)
+- `dnf` is a very strong package manager (very important to me)
 - Has great gaming performance
 - Backed by an enterprise (not just some hobbyists [can be good/bad])
 - Includes support for stable software along with lots of bleeding-edge / rolling release software
@@ -67,4 +67,38 @@ Here's my awesome list:
 ## Which software did you use for Dualbooting?
 I went with [rEFInd](https://https://www.rodsbooks.com/refind/), the most common (I believe) software / firmware for getting the dualbooting job done.
 
-In the past, I had stated that this tool had bad documentation, but I was just stupid as this tool has THE best documentation I think i've ever read. It goes into depth about the most common issues and even some advanced issues. Now, the developer isn't very present in the scene anymore (atleast according to the last update) 
+In the past, I had stated that this tool had bad documentation, but I was just stupid as this tool has **THE** best documentation I think I've ever read. It goes into depth about the most common issues and even some advanced issues. Now, the developer isn't very present in the scene anymore (atleast according to the last update)
+
+This software was pretty easy to work with on Linux, but working with it on Windows it very stupid because you can't access the ESP *(EFI System Partition)* without mounting it using `diskpart`, which is pretty dumb. Now `diskpart` is a good tool, but it's annoying to use and the functions are named weird.
+
+## Configuring rEFInd
+Basically, I installed a custom theme, I don't remember what it was called, I will update this when I can check and configured it in the EFI/refind directory where you can find a few things other than this theme folder, depicted below.
+
+```
+.
+└── EFI/
+    ├── refind/
+    │   ├── icons/
+    │   ├── fonts/
+    │   ├── themes/
+    │   ├── tools_x64/
+    │   └── drivers_x64/
+    ├── refind.conf
+    └── refind_x64.efi
+```
+
+### Where do I get a theme?
+There's a niche website called the [rEFInd Themes Collection](https://refind-themes-collection.netlify.app/) which is what I used to find my theme, that has a showcase of a bunch of rEFInd themes.
+
+After this, as you can probably imagine, you just copy the theme you want using `git clone` into the `themes/` folder and modify a few lines in the `refind.conf` and you have a working theme. It's pretty straightforward and it looks stunning.
+
+Often times, the git repository for the theme has the instructions that tells you exactly how to install the theme and get it up and running.
+
+## Now what?
+That's basically it. I recommend going into your BIOS and changing the boot order to prioritize rEFInd before anything else to prevent the OS's you have installed from taking boot control.
+
+Now, everytime I boot my PC, I'm welcomed by the rEFInd boot loader and I get to choose from either Windows or Fedora (for now)
+
+Now, you can always have more than just 2 OS's installed at once, but my example only had 2.
+
+Thanks for reading, and have a great rest of your day / night.
