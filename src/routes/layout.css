@@ -1,0 +1,381 @@
+@import "tailwindcss";
+
+/*
+ * Nord Frost, dark only.
+ * Every radius utility is unset on purpose — this site is square by design.
+ */
+@theme {
+	--radius-*: initial;
+
+	--color-bg: #2e3440;
+	--color-bg-deep: #272c36;
+	--color-surface: #343b48;
+	--color-surface-2: #3b4252;
+	--color-line: #434c5e;
+	--color-line-soft: #3a4152;
+
+	--color-text: #eceff4;
+	--color-dim: #c3ccd9;
+	--color-muted: #8c96a8;
+	--color-faint: #6b7488;
+
+	--color-frost: #88c0d0;
+	--color-frost-deep: #81a1c1;
+	--color-frost-pale: #8fbcbb;
+	--color-steel: #5e81ac;
+
+	--color-aurora-green: #a3be8c;
+	--color-aurora-yellow: #ebcb8b;
+	--color-aurora-red: #bf616a;
+	--color-aurora-purple: #b48ead;
+	--color-aurora-orange: #d08770;
+
+	--font-mono:
+		"JetBrains Mono", ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas,
+		monospace;
+	--font-sans:
+		"Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+@layer base {
+	* {
+		border-radius: 0;
+	}
+
+	html {
+		scroll-behavior: smooth;
+		background-color: var(--color-bg);
+		color-scheme: dark;
+	}
+
+	body {
+		background-color: var(--color-bg);
+		color: var(--color-text);
+		font-family: var(--font-sans);
+		-webkit-font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
+	}
+
+	::selection {
+		background-color: var(--color-frost);
+		color: var(--color-bg);
+	}
+
+	:focus-visible {
+		outline: 2px solid var(--color-frost);
+		outline-offset: 2px;
+	}
+
+	::-webkit-scrollbar {
+		width: 10px;
+		height: 10px;
+	}
+	::-webkit-scrollbar-track {
+		background: var(--color-bg-deep);
+	}
+	::-webkit-scrollbar-thumb {
+		background: var(--color-line);
+		border: 2px solid var(--color-bg-deep);
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background: var(--color-faint);
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		*,
+		*::before,
+		*::after {
+			animation-duration: 0.01ms !important;
+			animation-iteration-count: 1 !important;
+			transition-duration: 0.01ms !important;
+			scroll-behavior: auto !important;
+		}
+	}
+}
+
+/* ---------------------------------------------------------------- primitives */
+
+@layer components {
+	/* The card. Square, hairline, faintly lifted off the background. */
+	.card {
+		position: relative;
+		background-color: var(--color-surface);
+		border: 1px solid var(--color-line);
+	}
+
+	.card-hover {
+		transition:
+			border-color 160ms ease,
+			background-color 160ms ease;
+	}
+	.card-hover:hover {
+		border-color: var(--color-steel);
+		background-color: var(--color-surface-2);
+	}
+
+	/* Header strip inside a card: uppercase mono label + optional trailing slot. */
+	.card-label {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.75rem;
+		padding: 0.625rem 1rem;
+		border-bottom: 1px solid var(--color-line);
+		font-family: var(--font-mono);
+		font-size: 0.6875rem;
+		font-weight: 500;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		color: var(--color-muted);
+	}
+
+	.card-body {
+		padding: 1rem;
+	}
+
+	/* Corner ticks — a small flourish that reads as "technical drawing". */
+	.ticked::before,
+	.ticked::after {
+		content: "";
+		position: absolute;
+		width: 5px;
+		height: 5px;
+		border-color: var(--color-steel);
+		opacity: 0;
+		transition: opacity 160ms ease;
+	}
+	.ticked::before {
+		top: -1px;
+		left: -1px;
+		border-top: 1px solid;
+		border-left: 1px solid;
+	}
+	.ticked::after {
+		bottom: -1px;
+		right: -1px;
+		border-bottom: 1px solid;
+		border-right: 1px solid;
+	}
+	.ticked:hover::before,
+	.ticked:hover::after {
+		opacity: 1;
+	}
+
+	.btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+		padding: 0.6875rem 1.25rem;
+		border: 1px solid transparent;
+		font-family: var(--font-mono);
+		font-size: 0.8125rem;
+		font-weight: 500;
+		letter-spacing: 0.02em;
+		white-space: nowrap;
+		transition:
+			background-color 160ms ease,
+			border-color 160ms ease,
+			color 160ms ease;
+	}
+
+	.btn-primary {
+		background-color: var(--color-frost);
+		border-color: var(--color-frost);
+		color: var(--color-bg);
+	}
+	.btn-primary:hover {
+		background-color: var(--color-frost-pale);
+		border-color: var(--color-frost-pale);
+	}
+
+	.btn-ghost {
+		border-color: var(--color-line);
+		color: var(--color-dim);
+	}
+	.btn-ghost:hover {
+		border-color: var(--color-frost-deep);
+		color: var(--color-text);
+		background-color: var(--color-surface);
+	}
+
+	/* Uppercase mono section eyebrow with a leading rule. */
+	.eyebrow {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		font-family: var(--font-mono);
+		font-size: 0.6875rem;
+		font-weight: 500;
+		letter-spacing: 0.16em;
+		text-transform: uppercase;
+		color: var(--color-frost);
+	}
+	.eyebrow::before {
+		content: "";
+		width: 1.5rem;
+		height: 1px;
+		background-color: var(--color-frost);
+	}
+
+	.tag {
+		display: inline-block;
+		padding: 0.1875rem 0.5rem;
+		border: 1px solid var(--color-line);
+		font-family: var(--font-mono);
+		font-size: 0.6875rem;
+		color: var(--color-muted);
+		white-space: nowrap;
+	}
+
+	/* Prose for project write-ups. Square code blocks, frost accents. */
+	.prose {
+		color: var(--color-dim);
+		line-height: 1.75;
+	}
+	.prose > * + * {
+		margin-top: 1.125rem;
+	}
+	.prose h2 {
+		margin-top: 2.5rem;
+		font-family: var(--font-mono);
+		font-size: 0.75rem;
+		font-weight: 600;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+		color: var(--color-frost);
+	}
+	.prose h3 {
+		margin-top: 1.75rem;
+		font-size: 1.0625rem;
+		font-weight: 600;
+		color: var(--color-text);
+	}
+	.prose a {
+		color: var(--color-frost);
+		text-decoration: underline;
+		text-underline-offset: 3px;
+		text-decoration-color: color-mix(
+			in srgb,
+			var(--color-frost) 40%,
+			transparent
+		);
+	}
+	.prose a:hover {
+		text-decoration-color: var(--color-frost);
+	}
+	.prose strong {
+		color: var(--color-text);
+		font-weight: 600;
+	}
+	.prose code {
+		font-family: var(--font-mono);
+		font-size: 0.875em;
+		padding: 0.125rem 0.375rem;
+		background-color: var(--color-bg-deep);
+		border: 1px solid var(--color-line-soft);
+		color: var(--color-frost-pale);
+	}
+	.prose pre {
+		padding: 1rem;
+		overflow-x: auto;
+		background-color: var(--color-bg-deep);
+		border: 1px solid var(--color-line);
+		font-family: var(--font-mono);
+		font-size: 0.8125rem;
+		line-height: 1.7;
+	}
+	.prose pre code {
+		padding: 0;
+		border: 0;
+		background: none;
+		color: var(--color-dim);
+	}
+	.prose ul,
+	.prose ol {
+		padding-left: 1.25rem;
+	}
+	.prose li {
+		margin-top: 0.375rem;
+	}
+	.prose ul > li {
+		list-style: none;
+		position: relative;
+	}
+	.prose ul > li::before {
+		content: "▪";
+		position: absolute;
+		left: -1.25rem;
+		color: var(--color-steel);
+	}
+	.prose ol > li {
+		list-style: decimal;
+	}
+	.prose blockquote {
+		padding-left: 1rem;
+		border-left: 2px solid var(--color-steel);
+		color: var(--color-muted);
+	}
+}
+
+/* ---------------------------------------------------------------- decoration */
+
+/* Faint engineering grid, faded out at the edges. Used behind the hero. */
+.grid-bg {
+	background-image:
+		linear-gradient(to right, var(--color-line-soft) 1px, transparent 1px),
+		linear-gradient(to bottom, var(--color-line-soft) 1px, transparent 1px);
+	background-size: 64px 64px;
+	mask-image: radial-gradient(
+		ellipse 80% 60% at 50% 0%,
+		#000 20%,
+		transparent 75%
+	);
+}
+
+.text-gradient {
+	background-image: linear-gradient(
+		108deg,
+		var(--color-frost-pale) 0%,
+		var(--color-frost) 34%,
+		var(--color-frost-deep) 62%,
+		var(--color-aurora-purple) 100%
+	);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
+/* Soft frost bloom behind the hero headline. */
+.bloom {
+	background: radial-gradient(
+		circle at center,
+		color-mix(in srgb, var(--color-frost) 22%, transparent) 0%,
+		transparent 68%
+	);
+	filter: blur(64px);
+}
+
+.cursor-blink {
+	animation: blink 1.15s steps(2, start) infinite;
+}
+
+@keyframes blink {
+	to {
+		visibility: hidden;
+	}
+}
+
+.pulse-dot {
+	animation: pulse-dot 2.4s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+	0%,
+	100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.35;
+	}
+}
