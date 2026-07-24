@@ -115,9 +115,9 @@ let { data }: { data: PageData } = $props();
 				<a href="mailto:{site.email}" class="btn btn-primary">
 					{site.email}
 				</a>
-				<a href={site.blog} class="btn btn-ghost">
-					Blog
-					<Icon name="arrow-up-right" size={14} />
+				<a href="/socials" class="btn btn-ghost">
+					Socials
+					<Icon name="arrow-right" size={14} />
 				</a>
 			</div>
 		</div>

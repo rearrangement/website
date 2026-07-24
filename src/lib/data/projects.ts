@@ -85,10 +85,10 @@ gives you a full page. One set of content, two presentations.</p>
 		status: "maintained",
 		stack: ["TypeScript", "Bun"],
 		links: [
-			{ 
-				label: "source", 
-				href: "https://github.com/WickedSoftworks/winstro" 
-			}
+			{
+				label: "source",
+				href: "https://github.com/WickedSoftworks/winstro",
+			},
 		],
 		featured: true,
 		body: `
@@ -109,7 +109,8 @@ making it easier to manage your Windows environment across multiple installation
 	{
 		slug: "evermind",
 		name: "Evermind",
-		summary: "The beautiful, sleek, online student planner — never miss another deadline.",
+		summary:
+			"The beautiful, sleek, online student planner — never miss another deadline.",
 		blurb:
 			"This is a beautiful, sleek, online student planner that was built to help you stay organized, ditch the paper, and never miss another deadline. It was built with students in mind, and is designed to be simple, intuitive, and easy to use.",
 		year: "2025",
@@ -118,12 +119,12 @@ making it easier to manage your Windows environment across multiple installation
 		links: [
 			{
 				label: "source",
-				"href": "https://github.com/WickedSoftworks/evermind"
+				href: "https://github.com/WickedSoftworks/evermind",
 			},
 			{
 				label: "live",
-				"href": "https://evermind.shxrk.dev"
-			}
+				href: "https://evermind.shxrk.dev",
+			},
 		],
 		body: `
 <p>

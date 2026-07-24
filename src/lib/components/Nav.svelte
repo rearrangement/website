@@ -6,6 +6,7 @@ import { site } from "$lib/config";
 const links = [
 	{ label: "index", href: "/" },
 	{ label: "projects", href: "/projects" },
+	{ label: "socials", href: "/socials" },
 ];
 
 // /projects/foo should still light up the "projects" link.

@@ -20,9 +20,87 @@ export const site = {
 
 export const socials = [
 	// href is what's linked; label is the mono text shown next to the icon.
-	{ label: "github", href: "https://github.com/mostwise/website", icon: "github" },
+	{
+		label: "github",
+		href: "https://github.com/mostwise/website",
+		icon: "github",
+	},
 	{ label: "blog", href: site.blog, icon: "rss" },
 	{ label: "email", href: `mailto:${site.email}`, icon: "mail" },
+] as const;
+
+/**
+ * The /socials page. Two lists: ways to actually reach me, and profiles you
+ * can look at without talking to me. Handles here are PUBLIC by definition —
+ * this module ships to the browser, so never put an unlisted account here.
+ */
+export const contact = [
+	{
+		platform: "discord",
+		icon: "discord",
+		handle: "@imsoftaspowder",
+		href: "https://discord.com/users/1204149467251613756",
+		note: "My main mode of communication, and the fastest way to get a reply.",
+	},
+	{
+		platform: "signal",
+		icon: "signal",
+		handle: "@wisest.33",
+		href: "https://signal.org",
+		note: "If you'd rather not use Discord. Better for anything private.",
+	},
+	{
+		platform: "email",
+		icon: "mail",
+		handle: site.email,
+		href: `mailto:${site.email}`,
+		note: "Slowest of the three, but the right choice for anything important.",
+	},
+] as const;
+
+export const profiles = [
+	{
+		platform: "github",
+		icon: "github",
+		handle: "@mostwise",
+		href: "https://github.com/mostwise",
+		note: "Everything I build in public, including this site.",
+	},
+	{
+		platform: "spotify",
+		icon: "spotify",
+		handle: "@dylan",
+		href: "https://open.spotify.com/user/ip24s6xdgak5k5rjnuqc59qo4",
+		note: "Make fun of my music taste, or don't. I'm happy to talk about it either way.",
+	},
+	{
+		platform: "steam",
+		icon: "steam",
+		handle: "@mostwise",
+		href: "https://steamcommunity.com/id/mostwise",
+		note: "What I play when I'm not at a terminal.",
+	},
+	{
+		platform: "monkeytype",
+		icon: "monkeytype",
+		handle: "@dylnn",
+		href: "https://monkeytype.com/profile/dylnn",
+		note: "Typing stats. I haven't been active here in a while.",
+	},
+	{
+		platform: "mastodon",
+		icon: "mastodon",
+		handle: "@shxrk@defcon.social",
+		href: "https://defcon.social/@shxrk",
+		note: "Mostly dormant, though I keep meaning to use it properly.",
+	},
+	{
+		platform: "bluesky",
+		icon: "bluesky",
+		handle: "@0xdyl.bsky.social",
+		href: "https://bsky.app/profile/0xdyl.bsky.social",
+		note: "Claimed the handle early and have barely touched it since.",
+	},
 ] as const;
 
 /**
@@ -80,23 +158,23 @@ export const stack = [
 	{
 		group: "languages",
 		items: [
-			"TypeScript", 
-			"Go (learning)", 
-			"Rust (learning)", 
-			"C# (beginner)", 
-			"Bash", 
-			"JavaScript"
+			"TypeScript",
+			"Go (learning)",
+			"Rust (learning)",
+			"C# (beginner)",
+			"Bash",
+			"JavaScript",
 		],
 	},
 	{
 		group: "frameworks",
 		items: [
-			"SvelteKit", 
-			"Next.js", 
-			"React", 
-			"Tailwind", 
-			"Astro", 
-			"TanStack Start"
+			"SvelteKit",
+			"Next.js",
+			"React",
+			"Tailwind",
+			"Astro",
+			"TanStack Start",
 		],
 	},
 	{
@@ -112,13 +190,6 @@ export const stack = [
 	},
 	{
 		group: "tooling",
-		items: [
-			"Neovim", 
-			"Git", 
-			"Biome", 
-			"Vite", 
-			"Playwright", 
-			"Bun"
-		],
+		items: ["Neovim", "Git", "Biome", "Vite", "Playwright", "Bun"],
 	},
 ] as const;
