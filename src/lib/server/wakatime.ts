@@ -2,7 +2,7 @@ import { env } from "$env/dynamic/private";
 import { handles, isSet, wakatimeProjects } from "$lib/config";
 import { cached, fetchJson } from "./cache";
 
-const TTL = 2 * 60 * 60 * 1000; // 2h
+const TTL = 10 * 60 * 1000; // 10min
 
 export interface WakaLanguage {
 	name: string;
