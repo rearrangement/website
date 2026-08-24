@@ -1,16 +1,9 @@
 import { browser } from "$app/environment";
 
-/**
- * Lanyard exposes Discord presence over a public WebSocket — no auth, no
- * secrets. The account must have joined discord.gg/lanyard once for the API
- * to be permitted to read it.
- */
-
 const SOCKET_URL = "wss://api.lanyard.rest/socket";
 const MAX_ATTEMPTS = 6;
 const BASE_DELAY = 2000;
 
-/** Discord activity types. 4 is a custom status, which we surface separately. */
 export const ActivityType = {
 	Playing: 0,
 	Streaming: 1,
@@ -68,7 +61,6 @@ type Op = { op: number; t?: string; d: unknown };
 export class Lanyard {
 	presence = $state<Presence | null>(null);
 	connected = $state(false);
-	/** Ticks once a second so elapsed timers and progress bars stay live. */
 	now = $state(Date.now());
 
 	#socket: WebSocket | null = null;

@@ -41,10 +41,6 @@ interface User {
 	followers: number;
 }
 
-/**
- * GITHUB_TOKEN is optional — it only raises the REST rate limit from 60/hr to
- * 5000/hr per IP. With the 2h cache, unauthenticated is fine for one site.
- */
 function ghHeaders(): Record<string, string> {
 	const token = env.GITHUB_TOKEN;
 	return token ? { authorization: `Bearer ${token}` } : {};

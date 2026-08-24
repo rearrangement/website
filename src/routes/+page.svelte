@@ -23,14 +23,6 @@ let { data }: { data: PageData } = $props();
 
 <Hero />
 
-<!--
-	Live telemetry. This section DELIBERATELY breaks the site's max-w-5xl width
-	rule: it widens to max-w-7xl so the two card columns keep their full,
-	comfortable width and spread toward the edges (with a center channel)
-	rather than crowding. Everything below returns to the normal width.
-	Columns are balanced by height: GitHub + WakaTime against Discord +
-	Last.fm + Clock.
--->
 <section
 	aria-labelledby="signals-heading"
 	class="mx-auto max-w-5xl px-5 pt-20 sm:px-8"
@@ -46,15 +38,6 @@ let { data }: { data: PageData } = $props();
 		</p>
 	</div>
 
-	<!--
-		Two equal 1fr columns (gap-8 between them), cards stretched to fill.
-		items-stretch makes both columns the same height; justify-between then
-		spreads each column's cards to fill that height, so the two columns
-		bottom-align (symmetry) regardless of content. Cards are distributed to
-		keep the columns close in height: GitHub + Last.fm against WakaTime +
-		Discord + Clock. min-w-0 (and on children) keeps the wide GitHub heatmap
-		scrolling inside its card instead of blowing the column out.
-	-->
 	<div class="grid items-stretch gap-8 lg:grid-cols-2">
 		<div class="flex min-w-0 flex-col justify-between gap-5 [&>*]:min-w-0">
 			<GithubCard stats={data.github} />

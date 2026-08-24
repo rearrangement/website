@@ -8,16 +8,9 @@ import { type Project, projects } from "$lib/data/projects";
 
 const title = `Projects — ${site.domain}`;
 
-/**
- * Open the project as a popout at /projects/{slug} without a full
- * navigation. Direct loads of that URL still render the standalone page —
- * same content, two presentations.
- */
 async function select(event: MouseEvent, project: Project) {
-	// Let the browser handle new-tab clicks, middle clicks and the like.
 	if (event.button !== 0) return;
 	if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-	// Narrow screens get the real page — a modal there is just a worse page.
 	if (window.matchMedia("(max-width: 639px)").matches) return;
 
 	event.preventDefault();

@@ -1,10 +1,3 @@
-/**
- * Projects are plain data. `body` is rendered as HTML inside `.prose`, so you
- * can write real markup here — headings, lists, code blocks, links.
- *
- * The `slug` becomes the URL: /projects/{slug}
- */
-
 export type ProjectStatus = "active" | "maintained" | "archived" | "experiment";
 
 export interface ProjectLink {
@@ -15,17 +8,13 @@ export interface ProjectLink {
 export interface Project {
 	slug: string;
 	name: string;
-	/** One line. Shown on the gallery card and in the popout header. */
 	summary: string;
-	/** A few sentences. Shown at the top of the popout, above the long body. */
 	blurb: string;
 	year: string;
 	status: ProjectStatus;
 	stack: string[];
 	links: ProjectLink[];
-	/** Shown on the home page in the "selected work" strip. */
 	featured?: boolean;
-	/** HTML. Rendered inside .prose. */
 	body: string;
 }
 

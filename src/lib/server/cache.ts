@@ -1,8 +1,3 @@
-/**
- * Dead-simple in-memory TTL cache. These widgets are decorative — if the
- * process restarts and we refetch, nothing is lost.
- */
-
 interface Entry<T> {
 	value: T;
 	expires: number;
@@ -23,11 +18,6 @@ export async function cached<T>(
 	return value;
 }
 
-/**
- * Fetch JSON, returning null instead of throwing. Every widget treats null as
- * "unavailable" and renders a placeholder, so one dead upstream can't take the
- * whole page down.
- */
 export async function fetchJson<T>(
 	url: string,
 	init?: RequestInit,

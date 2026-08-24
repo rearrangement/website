@@ -9,7 +9,6 @@ declare global {
 		// interface PageData {}
 		// interface Platform {}
 
-		/** Set by the projects gallery when opening a project as a shallow-routed popout. */
 		interface PageState {
 			project?: Project;
 		}

@@ -36,15 +36,8 @@ interface WakaResponse {
 	};
 }
 
-// Allowlist as a lowercase set for case-insensitive matching.
 const ALLOWED = new Set(wakatimeProjects.map((p) => p.trim().toLowerCase()));
 
-/**
- * Placeholder data for previewing the card before a real account has any
- * history. Enabled only when WAKATIME_MOCK=true is set in .env (gitignored),
- * so it can never reach production. Its projects bypass the allowlist on
- * purpose — it's fake data whose only job is to show the full layout.
- */
 const MOCK_STATS: WakaStats = {
 	total: "18 hrs 42 mins",
 	dailyAverage: "2 hrs 40 mins",
@@ -67,10 +60,6 @@ const MOCK_STATS: WakaStats = {
 	],
 };
 
-/**
- * Public WakaTime stats. Requires "Display coding activity publicly" to be
- * enabled in WakaTime settings — otherwise this 401s and the widget hides.
- */
 export async function getWakatimeStats(): Promise<WakaStats | null> {
 	if (env.WAKATIME_MOCK === "true") {
 		console.warn(
@@ -94,9 +83,6 @@ export async function getWakatimeStats(): Promise<WakaStats | null> {
 				percent: Math.round(l.percent),
 			}));
 
-		// Only allowlisted projects survive this filter, so unlisted names
-		// (corporate work, etc.) are dropped before anything is sent to the
-		// browser. Empty allowlist → empty row.
 		const projects: WakaProject[] = (res.data.projects ?? [])
 			.filter((p) => ALLOWED.has(p.name.trim().toLowerCase()))
 			.map((p) => ({

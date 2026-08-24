@@ -21,7 +21,6 @@ interface OpenMeteoResponse {
 	};
 }
 
-/** WMO weather interpretation codes, collapsed to the ones worth naming. */
 const WMO: Record<number, string> = {
 	0: "clear",
 	1: "mostly clear",
@@ -54,9 +53,6 @@ const WMO: Record<number, string> = {
 };
 
 export async function getWeather(): Promise<Weather | null> {
-	// Read from the environment, never from $lib/config — config.ts is imported
-	// by a component, so anything in it is bundled into the public client JS.
-	// These stay server-side and never appear in a response body.
 	const latitude = Number(env.WEATHER_LAT);
 	const longitude = Number(env.WEATHER_LON);
 	if (!Number.isFinite(latitude) || !Number.isFinite(longitude)) return null;
