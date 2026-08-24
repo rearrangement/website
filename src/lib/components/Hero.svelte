@@ -2,7 +2,6 @@
 import Icon from "$lib/components/Icon.svelte";
 import { handles, isSet, site, stack } from "$lib/config";
 
-// A static "whoami" block — the live telemetry lives further down the page.
 const facts = [
 	{ key: "role", value: "software engineer" },
 	{ key: "focus", value: stack[0].items.slice(0, 3).join(", ") },
@@ -26,7 +25,7 @@ const facts = [
 				</p>
 
 				<h1 class="mt-5 text-4xl leading-[1.08] font-semibold tracking-tight sm:text-5xl lg:text-[3.5rem]">
-					Hey, I'm <span class="text-gradient">{site.name}</span>.<br />
+					Hey, I'm <span class="text-frost">{site.name}</span>.<br />
 					I build small,<br class="hidden sm:block" /> sharp software.
 				</h1>
 

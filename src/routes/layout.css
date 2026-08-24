@@ -1,9 +1,5 @@
 @import "tailwindcss";
 
-/*
- * Nord Frost, dark only.
- * Every radius utility is unset on purpose — this site is square by design.
- */
 @theme {
 	--radius-*: initial;
 
@@ -93,10 +89,7 @@
 	}
 }
 
-/* ---------------------------------------------------------------- primitives */
-
 @layer components {
-	/* The card. Square, hairline, faintly lifted off the background. */
 	.card {
 		position: relative;
 		background-color: var(--color-surface);
@@ -113,7 +106,6 @@
 		background-color: var(--color-surface-2);
 	}
 
-	/* Header strip inside a card: uppercase mono label + optional trailing slot. */
 	.card-label {
 		display: flex;
 		align-items: center;
@@ -133,7 +125,6 @@
 		padding: 1rem;
 	}
 
-	/* Corner ticks — a small flourish that reads as "technical drawing". */
 	.ticked::before,
 	.ticked::after {
 		content: "";
@@ -199,7 +190,6 @@
 		background-color: var(--color-surface);
 	}
 
-	/* Uppercase mono section eyebrow with a leading rule. */
 	.eyebrow {
 		display: flex;
 		align-items: center;
@@ -228,7 +218,6 @@
 		white-space: nowrap;
 	}
 
-	/* Prose for project write-ups. Square code blocks, frost accents. */
 	.prose {
 		color: var(--color-dim);
 		line-height: 1.75;
@@ -318,9 +307,6 @@
 	}
 }
 
-/* ---------------------------------------------------------------- decoration */
-
-/* Faint engineering grid, faded out at the edges. Used behind the hero. */
 .grid-bg {
 	background-image:
 		linear-gradient(to right, var(--color-line-soft) 1px, transparent 1px),
@@ -346,7 +332,6 @@
 	color: transparent;
 }
 
-/* Soft frost bloom behind the hero headline. */
 .bloom {
 	background: radial-gradient(
 		circle at center,
