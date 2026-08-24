@@ -6,7 +6,7 @@ import ProjectModal from "$lib/components/ProjectModal.svelte";
 import { site } from "$lib/config";
 import { type Project, projects } from "$lib/data/projects";
 
-const title = `Projects — ${site.domain}`;
+const title = `Projects: ${site.domain}`;
 
 async function select(event: MouseEvent, project: Project) {
 	if (event.button !== 0) return;
@@ -30,7 +30,7 @@ async function select(event: MouseEvent, project: Project) {
 	<meta property="og:title" content={title} />
 	<meta
 		name="description"
-		content="Projects and experiments by {site.name} — {projects.length} of them, with write-ups."
+		content="Projects and experiments by {site.name}, {projects.length} of them, with write-ups."
 	/>
 </svelte:head>
 
@@ -41,7 +41,7 @@ async function select(event: MouseEvent, project: Project) {
 			Projects &amp; experiments
 		</h1>
 		<p class="mt-4 max-w-xl text-base leading-relaxed text-muted">
-			Side projects, tools and experiments. Click any card for the longer story —
+			Side projects, tools and experiments. Click any card for the longer story,
 			each one has its own page at
 			<span class="font-mono text-sm text-frost">/projects/{"{name}"}</span>.
 		</p>

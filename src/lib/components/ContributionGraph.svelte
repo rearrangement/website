@@ -27,8 +27,6 @@ const MONTHS = [
 	"Dec",
 ];
 
-// Columns are weeks, rows are weekdays — the first column is padded with
-// nulls so every row lines up on the same weekday.
 const weeks = $derived.by(() => {
 	if (!days.length) return [];
 	const out: (ContributionDay | null)[][] = [];

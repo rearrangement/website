@@ -1,12 +1,4 @@
 <script lang="ts">
-/**
- * Inline icon set. Kept local so the site ships zero icon-font or SVG-sprite
- * dependencies. Two families, both on a 24x24 grid:
- *
- * - `strokes` — Lucide-style outlines, drawn with stroke and no fill.
- * - `brands`  — logos for the accounts on /socials, from Simple Icons (CC0).
- *   These are solid glyphs, so they render filled with the stroke turned off.
- */
 type Stroke =
 	| "github"
 	| "rss"

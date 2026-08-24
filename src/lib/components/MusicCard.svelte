@@ -45,7 +45,7 @@ function ago(iso: string | null): string {
 			<p class="font-mono text-xs leading-relaxed text-faint">
 				Set <span class="text-frost">handles.lastfm</span> in
 				<span class="text-dim">src/lib/config.ts</span> and add
-				<span class="text-dim">LASTFM_API_KEY</span> to your .env — see .env.example.
+				<span class="text-dim">LASTFM_API_KEY</span> to your .env file. See .env.example.
 			</p>
 		{:else}
 			{#if stats.nowPlaying}
@@ -81,7 +81,7 @@ function ago(iso: string | null): string {
 				<ul class="grid grid-cols-4 gap-2">
 					{#each stats.topArtists.slice(0, 8) as artist (artist.name)}
 						<li>
-							<a href={artist.url} class="group block" title="{artist.name} — {artist.plays} plays">
+							<a href={artist.url} class="group block" title="{artist.name} {artist.plays} plays">
 								<div class="relative aspect-square border border-line bg-bg-deep">
 									{#if artist.image}
 										<img

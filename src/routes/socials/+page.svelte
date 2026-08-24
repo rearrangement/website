@@ -2,7 +2,7 @@
 import Icon from "$lib/components/Icon.svelte";
 import { contact, profiles, site } from "$lib/config";
 
-const title = `Socials — ${site.domain}`;
+const title = `Socials: ${site.domain}`;
 
 type Entry = (typeof contact)[number] | (typeof profiles)[number];
 </script>
@@ -48,7 +48,7 @@ type Entry = (typeof contact)[number] | (typeof profiles)[number];
 			Where to find me
 		</h1>
 		<p class="mt-4 max-w-xl text-base leading-relaxed text-muted">
-			Come and talk to me if you want to, or don't — up to you. Everything below is
+			Come and talk to me if you want to, or don't; up to you. Everything below is
 			a public account; nothing here is a form that emails me.
 		</p>
 	</header>

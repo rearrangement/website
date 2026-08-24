@@ -29,12 +29,12 @@ export async function fetchJson<T>(
 			headers: { accept: "application/json", ...init?.headers },
 		});
 		if (!res.ok) {
-			console.warn(`[fetch] ${res.status} ${res.statusText} — ${url}`);
+			console.warn(`[fetch] ${res.status} ${res.statusText}: ${url}`);
 			return null;
 		}
 		return (await res.json()) as T;
 	} catch (err) {
-		console.warn(`[fetch] failed — ${url}`, err);
+		console.warn(`[fetch] failed: ${url}`, err);
 		return null;
 	}
 }

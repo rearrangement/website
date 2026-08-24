@@ -6,7 +6,7 @@ import type { PageData } from "./$types";
 
 let { data }: { data: PageData } = $props();
 
-const title = $derived(`${data.project.name} — ${site.domain}`);
+const title = $derived(`${data.project.name}: ${site.domain}`);
 </script>
 
 <svelte:head>

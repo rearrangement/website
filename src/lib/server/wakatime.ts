@@ -63,7 +63,7 @@ const MOCK_STATS: WakaStats = {
 export async function getWakatimeStats(): Promise<WakaStats | null> {
 	if (env.WAKATIME_MOCK === "true") {
 		console.warn(
-			"[wakatime] serving MOCK data — unset WAKATIME_MOCK to disable",
+			"[wakatime] serving MOCK data; unset WAKATIME_MOCK to disable",
 		);
 		return MOCK_STATS;
 	}

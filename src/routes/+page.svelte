@@ -16,8 +16,8 @@ let { data }: { data: PageData } = $props();
 </script>
 
 <svelte:head>
-	<title>{site.name} — {site.domain}</title>
-	<meta property="og:title" content="{site.name} — {site.domain}" />
+	<title>{site.name}: {site.domain}</title>
+	<meta property="og:title" content="{site.name}: {site.domain}" />
 	<meta property="og:description" content={site.description} />
 </svelte:head>
 

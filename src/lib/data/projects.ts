@@ -22,7 +22,7 @@ export const projects: Project[] = [
 	{
 		slug: "wisest-cc",
 		name: "wisest.cc",
-		summary: "This site — SvelteKit, Nord, and a pile of live telemetry.",
+		summary: "This site! Made with SvelteKit, designed Nord style, and some live telemetry.",
 		blurb:
 			"A personal site that doubles as a status page for myself. Everything square, everything server-rendered, and a handful of widgets that pull live data from the services I already use.",
 		year: "2026",
@@ -67,7 +67,7 @@ gives you a full page. One set of content, two presentations.</p>
 	{
 		slug: "winstro",
 		name: "Winstro",
-		summary: "A simple CLI project — make Windows more reproducible.",
+		summary: "A simple CLI project. Make Windows more reproducible.",
 		blurb:
 			"This is a simple, lightweight, easy-to-install CLI tool for Windows that makes it easier to install and configure software in a reproducible way.",
 		year: "2025",
@@ -99,7 +99,7 @@ making it easier to manage your Windows environment across multiple installation
 		slug: "evermind",
 		name: "Evermind",
 		summary:
-			"The beautiful, sleek, online student planner — never miss another deadline.",
+			"The beautiful, sleek, online student planner. Never miss another deadline.",
 		blurb:
 			"This is a beautiful, sleek, online student planner that was built to help you stay organized, ditch the paper, and never miss another deadline. It was built with students in mind, and is designed to be simple, intuitive, and easy to use.",
 		year: "2025",

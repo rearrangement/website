@@ -5,8 +5,6 @@ import type { Weather } from "$lib/server/weather";
 
 let { weather }: { weather: Weather | null } = $props();
 
-// The clock only renders after mount — a server-rendered timestamp would
-// disagree with the client's by a second and trip hydration.
 let now = $state<Date | null>(null);
 
 $effect(() => {

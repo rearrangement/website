@@ -4,7 +4,7 @@ import Icon from "$lib/components/Icon.svelte";
 </script>
 
 <svelte:head>
-	<title>{page.status} — not found</title>
+	<title>{page.status} not found</title>
 </svelte:head>
 
 <div class="mx-auto flex max-w-5xl flex-col items-start px-5 py-28 sm:px-8">

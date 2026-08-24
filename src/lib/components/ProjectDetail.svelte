@@ -64,7 +64,6 @@ const STATUS: Record<Project["status"], string> = {
 		{/if}
 	</div>
 
-	<!-- Author-controlled HTML from src/lib/data/projects.ts — not user input. -->
 	<div class="prose pt-8">
 		{@html project.body}
 	</div>

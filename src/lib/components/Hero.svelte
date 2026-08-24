@@ -30,8 +30,8 @@ const facts = [
 				</h1>
 
 				<p class="mt-6 max-w-lg text-base leading-relaxed text-muted sm:text-lg">
-					{site.tagline} This page is half portfolio, half status board — scroll for
-					live signals from the things I actually use.
+					{site.tagline} This is my portfolio for things that I do, and a place where
+					you can see what I'm doing.
 				</p>
 
 				<div class="mt-9 flex flex-wrap items-center gap-3">

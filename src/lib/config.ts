@@ -1,8 +1,4 @@
-/**
- * Everything personal lives here. Fill in the blanks below and the widgets
- * light up; leave one empty and that widget renders a quiet "not configured"
- * state instead of erroring.
- */
+// This is to make the site deployable for other people just in case they want to use it aswell
 
 export const site = {
 	name: "Dylan",
@@ -11,7 +7,7 @@ export const site = {
 	url: "https://wisest.cc",
 	tagline: "Backend-leaning generalist who likes small, sharp tools.",
 	description:
-		"Personal site of Dylan — projects, writing, and a bit of live telemetry.",
+		"My personal projects, writing, and some live telemetry.",
 	email: "wise@wisest.cc",
 	blog: "https://blog.wisest.cc",
 } as const;

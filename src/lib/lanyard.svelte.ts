@@ -149,7 +149,6 @@ export class Lanyard {
 		socket.addEventListener("error", () => socket.close());
 	}
 
-	/** The first non-custom activity — what to show as "currently doing". */
 	get activity(): Activity | null {
 		return (
 			this.presence?.activities.find((a) => a.type !== ActivityType.Custom) ??

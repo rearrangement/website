@@ -69,7 +69,7 @@ const nf = new Intl.NumberFormat("en-US");
 							<span
 								style:width="{lang.percent}%"
 								style:background-color={LANG_COLORS[i % LANG_COLORS.length]}
-								title="{lang.name} — {lang.percent}%"
+								title="{lang.name} {lang.percent}%"
 							></span>
 						{/each}
 					</div>
