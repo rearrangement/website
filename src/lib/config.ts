@@ -118,9 +118,9 @@ export const stack = [
 		group: "languages",
 		items: [
 			"TypeScript",
-			"Go (learning)",
+			"Go",
 			"Rust (learning)",
-			"C# (beginner)",
+			"C#",
 			"Bash",
 			"JavaScript",
 		],
@@ -142,9 +142,9 @@ export const stack = [
 			"Linux",
 			"Docker",
 			"Proxmox",
+			"Supabase",
 			"Kubernetes",
-			"Cloudflare",
-			"GitHub Actions",
+			"Cloudflare"
 		],
 	},
 	{
